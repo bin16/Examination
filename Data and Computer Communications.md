@@ -47,9 +47,12 @@
 	>Packet switching is a digital networking communications method that groups all transmitted data – regardless of content, type, or structure – into suitably sized blocks, called packet.
 
 	* This approach has a number of advantages over circuit switching: `5.22`	>* **Line efficiency is greater**, because a single node-to-node link can be dynamically shared by many packets over time.The packets are queued up and transmitted as rapidly as possible over the link. By contrast, with circuit switching, time on a node-to-node link is preallocated using synchronous time division multiplexing. Much of the time, such a link may be idle because a portion of its time is dedicated to a connection that is idle.	>* A packet-switching network can perform **data-rate conversion**.Two stations of different data rates can exchange packets because each connects to its node at its proper data rate.	>* **Usually do not reject packets**. When traffic becomes heavy on a circuit-switching network, some calls are blocked; that is, the network refuses to accept additional connection requests until the load on the network decreases. On a packet-switching network, packets are still accepted, but delivery delay increases.	>* **Priorities can be used**. If a node has a number of packets queued for transmission, it can transmit the higher-priority packets first.These packets will therefore experience less delay than lower-priority packets.
-* network address transmission NAT 11 53 54 62
->Network Address Translation (NAT) `11.53`  
+* Network Address Transmission(NAT) `11.53`
+>* The Internet has expanded and addresses became scarce  -- subnet and classless addressing (CIDR) were introduced to help conserve addresses>* Another mechanism was invented that allows multiple computers at a site to share a single, globally valid IP address, known as **Network Address Translation (NAT)**>* NAT provides **transparent communication**   -- a host in the Internet always appears to receive communication from a single computer rather than from one of many computers at the site>* NAT runs as an **in-line service**   -- It must be placed on the connection between the Internet and a site>* Most implementations embed NAT in another device   -- such as a Wi-Fi wireless access point or an Internet router
 
+* Transport-Layer NAT (NAPT) `11.56`
+>* Recall: applications use protocol port numbers to distinguish among services  -- So NAPT uses port numbers to associate each datagram with a TCP or UDP flow>* NAPT entries contain a **4-tuple** of source and destination IP addresses and protocol port numbers>* To avoid a conflict  -- NAPT must choose an alternative TCP source port for the connections
+![](images/nat.png)
 hw6 ip地址划分
 路由算法 ppt6
 ig hw4
