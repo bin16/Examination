@@ -53,6 +53,7 @@
 * Transport-Layer NAT (NAPT) `11.56`
 >* Recall: applications use protocol port numbers to distinguish among services  -- So NAPT uses port numbers to associate each datagram with a TCP or UDP flow>* NAPT entries contain a **4-tuple** of source and destination IP addresses and protocol port numbers>* To avoid a conflict  -- NAPT must choose an alternative TCP source port for the connections
 ![](images/nat.png)
+<!--
 hw6 ip地址划分
 路由算法 ppt6
 ig hw4
@@ -62,5 +63,5 @@ hw7 ig 选择题
 hw2 16 17 18 19
 ig hw3
 hw1 all
-
+-->
 [p2pp]:https://en.wikipedia.org/wiki/Peer-to-Peer_Protocol_(P2PP)
