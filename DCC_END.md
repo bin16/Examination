@@ -12,22 +12,17 @@
 > *ppt-3 (7/48)*
 >
 > --------------------------
-> Operations
-Sender: Transmits a single frame at a time.
-Receiver: Transmits acknowledgement (ACK) as it receives a frame.
-Sender receive ACK within time out.
-Go to step 1.
-If a frame or ACK is lost during transmission then it has to be transmitted again by sender. This retransmission process is known as ARQ (automatic repeat request).
-The problem with Stop-and-wait is that only one frame can be transmitted at a time and that often leads to inefficient transmission channel till we get the acknowledgement the sender can not transmit any new packet. During this time both the sender and the channel are unutilized.
-> *ppt3 (8/48)*
+> The problem with Stop-and-wait is that only one frame can be transmitted at a time and that often leads to inefficient transmission channel till we get the acknowledgement the sender can not transmit any new packet. During this time both the sender and the channel are unutilized.
 
 
-##### Asynchronous Transmission 异步传输 ppt-2 c6
-> The strategy with this scheme is to avoid the timing problem by not sending long, uninterrupted streams of bits. Instead, data are transmitted one character at a time, where each character is five to eight bits in length.1Timing or synchronization must only be maintained within each character; the receiver has the opportunity to resynchronize at the beginning of each new character.
+
+##### Asynchronous Transmission 异步传输 ^需要整理?^
+> *Or Asynchronous Transmission (Bit Oriented Transmission) means "面向位的传输"*
+> The strategy with this scheme is to avoid the timing problem by not sending long, uninterrupted streams of bits. Instead, data are transmitted one character at a time, where each character is five to eight bits in length. 1Timing or synchronization must only be maintained within each character; the receiver has the opportunity to resynchronize at the beginning of each new character.
+> 
 > *ppt-2 (19/47)*
 
 ##### Synchronous Transmission 同步传输 ppt-2 c6
-> *Or Asynchronous Transmission (Bit Oriented Transmission) means "面向位的传输"*
 > With synchronous transmission, a block of bits is transmitted in a steady stream without start and stop codes.The block may be many bits in length.To prevent timing drift between transmitter and receiver, their clocks must somehow be synchronized. 
 One possibility is to provide a separate clock line between transmitter and receiver. One side (transmitter or receiver) pulses the line regularly with one short
 pulse per bit time.The other side uses these regular pulses as a clock.
@@ -39,7 +34,7 @@ The receiving entity typically allocates a data buffer of some maximum length fo
 > *ppt-3 (5/48)*
 
 ##### SMTP (The Simple Mail Transfer Protocol)
-> The Simple Mail Transfer Protocol (SMTP) is the standard protocol that a mail transfer program uses
+> SMTP (The Simple Mail Transfer Protocol) is the standard protocol that a mail transfer program uses
 SMTP can be characterized as:
 - Follows a stream paradigm (TCP)
 - Uses textual control messages
@@ -92,14 +87,11 @@ Provide name resolution services
 
 
 ##### Dynamic Host Configuration Protocol (DHCP)
-> When a lease expires, a host can choose to relinquish the address or renegotiate with DHCP to extend the lease
-- Negotiation occurs concurrent with other activity
->
-> Normally, DHCP approves each lease extension
-- A computer continues to operate without any interruption
-- However, a server may be configured to deny lease extension for administrative or technical reasons
->
-> *ppt-11 (45/63)*
+> DHCP allows a computer to join a new network and obtain an IP address automatically
+When a computer boots the computer broadcasts a DHCP Request.
+Then the server sends a DHCP Reply, and we say that the server is offering an address to the client
+> *ppt-11 (42/63)*
+
 
 
 ##### Circuit Switching ^!E^
